@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Titulo</title>
+        <title>RPG</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     </head>
     <body>
@@ -15,10 +15,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a  class="nav-link "><img src="assets/img/heroesLogo.png" alt="Heroes V Banner"></a>
+                        <img class="img-fluid rounded" src="../../../assets/img/heroesLogo.png" alt="Heroes V Banner">
                     </li>
                     <li class="nav-item">
-                        <a  class="nav-link " href="contact.php">Contactar</a>
+                        <a  class="nav-link " href="contact.php">Crea una criatura</a>
                     </li>
                     <li class="nav-item ">
                         <?php if (isset($error)) {echo $error;} ?>
@@ -27,6 +27,8 @@
                     
             </div>  
         </nav>
+        
+        
         <?php
         // put your code here
         ?>
