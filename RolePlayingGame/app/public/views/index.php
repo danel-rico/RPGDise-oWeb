@@ -18,7 +18,7 @@
                         <img class="img-fluid rounded" src="../../../assets/img/heroesLogo.png" alt="Heroes V Banner">
                     </li>
                     <li class="nav-item">
-                        <a  class="nav-link " href="contact.php">Crea una criatura</a>
+                        <a  class="nav-link " href="creacionCriatura.php">Crea una criatura</a>
                     </li>
                     <li class="nav-item ">
                         <?php if (isset($error)) {echo $error;} ?>
