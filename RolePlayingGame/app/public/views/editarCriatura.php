@@ -1,3 +1,18 @@
+<?php
+//Es necesario que importemos los ficheros creados con anterioridad porque los vamos a utilizar desde este fichero.
+require_once(dirname(__FILE__) . '\..\..\..\persistance\DAO\CreatureDAO.php');
+require_once(dirname(__FILE__) . '\..\..\models\Creature.php');
+// Analize session
+require_once(dirname(__FILE__) . '\..\..\..\utils\SessionUtils.php');
+//Compruebo que me llega por GET el parámetro
+if (isset($_GET["id"])) {
+    $id = $_GET["id"];
+
+    $creatureDAO = new CreatureDAO();
+    $creature = $creatureDAO->selectById($id);
+}
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -28,7 +43,8 @@
             </div>  
         </nav>
         <form method="post" action="../../controllers/creature/CreatureController.php">
-            <input type="hidden" name="type" value="create">
+            <input type="hidden" name="type" value="edit">
+            <input type="hidden" id="idCreature" name="idCreature" value="<?php echo $creature->getIdCreature(); ?>">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Name" required>
             <br>

@@ -1,3 +1,17 @@
+<?php
+//Es necesario que importemos los ficheros creados con anterioridad porque los vamos a utilizar desde este fichero.
+require_once(dirname(__FILE__) . '\..\..\..\persistance\DAO\CreatureDAO.php');
+require_once(dirname(__FILE__) . '\..\..\models\Creature.php');
+// Analize session
+require_once(dirname(__FILE__) . '\..\..\..\utils\SessionUtils.php');
+//Compruebo que me llega por GET el parámetro
+if (isset($_GET["id"])) {
+    $id = $_GET["id"];
+
+    $creatureDAO = new CreatureDAO();
+    $creature = $creatureDAO->selectById($id);
+}
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,6 +41,24 @@
                     
             </div>  
         </nav>
+        <label for="name" >Name: </label>
+        <label for="nameC"><?php echo $creature->getName(); ?></label>
+        <br>
+        <label for="description">Description: </label>
+        <label for="descripcionC"><?php echo $creature->getDescription(); ?></label>
+        <br>
+        <label for="avatar">Avatar: </label>
+        <label for="avatarC"><?php echo $creature->getAvatar(); ?></label>
+        <br>
+        <label for="attackPower">Attack Power: </label>
+        <label for="attackC"><?php echo $creature->getAttackPower(); ?></label>
+        <br>
+        <label for="lifeLevel">Life Level: </label>
+        <label for="lifeC"><?php echo $creature->getLifeLevel(); ?></label>
+        <br>
+        <label for="weapon">Weapon: </label>
+        <label for="weaponC"><?php echo $creature->getWeapon(); ?></label>
+        <br>
         
         
         <?php
