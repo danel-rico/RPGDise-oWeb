@@ -15,7 +15,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <img class="img-fluid rounded" src="../../../assets/img/heroesLogo.png" alt="Heroes V Banner">
+                        <img class="img-fluid rounded" src="../../../../assets/img/heroesLogo.png" alt="Heroes V Banner">
                     </li>
                     <li class="nav-item">
                         <a  class="nav-link " href="creacionCriatura.php">Crea una criatura</a>
@@ -27,7 +27,7 @@
                     
             </div>  
         </nav>
-        <form method="post" action="../../controllers/creature/CreatureController.php">
+        <form method="post" action="../../../controllers/creature/CreatureController.php">
             <input type="hidden" name="type" value="create">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Name" required>
